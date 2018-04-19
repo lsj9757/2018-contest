@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" charset="utf-8">  
+	<title>2048</title>
+	<style type="text/css">
+		html,body{
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			width: 100%;
+			background-color: rgb(83, 58, 58);
+			font-family: '微软雅黑';
+		}
+		.pattern_box{
+			width: 18rem;
+			max-width: 95%;
+			height: 18rem;
+			left: 50%;
+			top: 50%;
+			position: relative;
+			transform: translate(-50%,-48%);
+			border: solid 0.3em #cecece;
+			-moz-user-select: none; 
+			-khtml-user-select: none; 
+			user-select: none;
+		}
+		.pattern_content{
+			height: 100%;
+			width: 100%;
+			overflow:hidden;
+			zoom:1; 
+		}
+		.pattern_grid{
+			width: 23.75%;
+			height: 23.75%;
+			float: left;
+			margin:1% 0 0 1%;
+			background-color:#F0E68C;
+			border-radius:10px;  
+			font-size: 1.5rem;
+			transition: all 0.1s ease-in-out;
+			display: flex;
+			align-items: center; 
+			justify-content:center;
+			color: #fff;
+		}
+		.pattern_grid:nth-child(4n){
+			margin-right: 1%;
+		}
+		.pattern_grid:nth-child(n+13){
+			margin-bottom: 1%;
+		}
+		.score_bar{
+			width: 100%;
+			position: absolute;
+			color: #FFBB00;
+			top:12%;
+			left: 50%;
+			font-size: 1.8rem;
+			text-align: center;
+			transform:translate(-50%,-50%);
+		}
+		#reInit{
+			margin-left: 1rem;
+		}
+		#reInit:hover{
+			background-color: rgb(60,42,43);
+			border-radius:15px; 
+		}
+		.pattern_footer{
+			width: 100%;
+			height: 2rem;
+			position: fixed;
+			bottom: 0px;
+			z-index: 10px;
+			background:rgba(6,6,11,0.3);        
+			text-align: center;
+			line-height: 2rem;
+		}
+		.pattern_footer a{
+			color: #fff;
+			font-size: 0.7rem;
+			text-decoration: none;
+		}
+		.pattern_footer a:hover{
+			color: #F0E68C;
+		}
+	</style>
+</head>
+<body>
+	<div class="score_bar">	
+		Score:<span id="score"></span><span id="reInit"><img src="./re.png"></span>
+	</div>
+	<div class="pattern_box">
+		<div class="pattern_content" id="pattern_content">
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid" id="test"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+			<div class="pattern_grid"></div>
+		</div>
+	</div>
+	<div class="pattern_footer">
+	 <a href="https://github.com/lsj9757">https://github.com/lsj9757</a>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="./2048.js"></script>
